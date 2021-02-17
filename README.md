@@ -4,7 +4,7 @@ This project demonstrates how to implement concurrency control strategies in a J
 
 ## Creating database and tables 
 
-For this demo to work, you need to create a database named TheCoffeeBreak with the following tables:
+For this demo to work, you need to create a relational database (MS SQL Server) named TheCoffeeBreak with the following tables:
 
 * Customers
 * Orders
@@ -20,4 +20,10 @@ CREATE TABLE Customers(
   LatestOrderStatus nvarchar(10), 
   Version rowversion
 );
+
+CREATE TABLE Orders(
+  Id int primary key not null identity(1,1), 
+  CustomerId int not null foreign key references Customers(Id), 
+  Placed datetime not null
+)  
 ```
