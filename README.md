@@ -25,5 +25,5 @@ CREATE TABLE Orders(
   Id int primary key not null identity(1,1), 
   CustomerId int not null foreign key references Customers(Id), 
   Placed datetime not null
-)  
+);  
 ```
