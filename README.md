@@ -8,8 +8,6 @@ For this demo to work, you need to create a relational database (MS SQL Server) 
 
 * Customers
 * Orders
-* Coffees
-* Suppliers
 
 You can use the following scripts to create the tables:
 
